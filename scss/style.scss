@@ -1,0 +1,121 @@
+$colorcard1: hsl(31, 77%, 52%);
+$colorcard2: hsl(184, 100%, 22%);
+$colorcard3: hsl(179, 100%, 13%);
+$bgheadbutton: hsl(0, 0%, 95%);
+$colorp: hsla(0, 0%, 100%, 0.75);
+$fonttitle: 'Big Shoulders Display', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    // position: relative;
+    // padding: 2rem;
+
+    .card {
+        padding: 2rem;
+        color: white;
+        h3 {
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            font-size: 1.9rem;
+            font-family: $fonttitle;
+        }
+
+        p {
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        img {
+            margin-bottom: 1.25rem;
+        }
+
+        .btn {
+            background-color: #fff;
+            border: 2px solid white;
+            border-radius: 2rem;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .bt1 {
+            color: $colorcard1;
+        }
+
+        .bt2 {
+            color: $colorcard2;
+        }
+
+        .bt3 {
+            color: $colorcard3;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+        }
+    }
+}
+
+.card1 {
+    background-color: $colorcard1;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card2 {
+    background-color: $colorcard2;
+}
+
+.card3 {
+    background-color: $colorcard3;
+    border-radius: 0 0 1rem 1rem;
+}
+
+@media (min-width: 992px) {
+    .container {
+        display: flex;
+        align-items: center;
+        max-width: 900px;
+        min-height: 100vh;
+        justify-content: center;
+        margin: auto;
+        .card1 {
+            border-radius: 1rem 0 0 1rem;
+        }
+        .card3 {
+            border-radius: 0 1rem 1rem 0;
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 420px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        img {
+            width: 18%;
+        }
+        .btn {
+            width: 100%;
+            border: 1px solid white;
+            padding: 0.5rem;
+            justify-content: center;
+        }
+    }
+}

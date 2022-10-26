@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container .card {
+  padding: 2rem;
+  color: white;
+}
+.container .card h3 {
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  font-family: "Big Shoulders Display", sans-serif;
+}
+.container .card p {
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+.container .card img {
+  margin-bottom: 1.25rem;
+}
+.container .card .btn {
+  background-color: #fff;
+  border: 2px solid white;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.container .card .bt1 {
+  color: hsl(31deg, 77%, 52%);
+}
+.container .card .bt2 {
+  color: hsl(184deg, 100%, 22%);
+}
+.container .card .bt3 {
+  color: hsl(179deg, 100%, 13%);
+}
+.container .card .btn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.card1 {
+  background-color: hsl(31deg, 77%, 52%);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card2 {
+  background-color: hsl(184deg, 100%, 22%);
+}
+
+.card3 {
+  background-color: hsl(179deg, 100%, 13%);
+  border-radius: 0 0 1rem 1rem;
+}
+
+@media (min-width: 992px) {
+  .container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    min-height: 100vh;
+    justify-content: center;
+    margin: auto;
+  }
+  .container .card1 {
+    border-radius: 1rem 0 0 1rem;
+  }
+  .container .card3 {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+@media (max-width: 420px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    width: 18%;
+  }
+  .card .btn {
+    width: 100%;
+    border: 1px solid white;
+    padding: 0.5rem;
+    justify-content: center;
+  }
+}
